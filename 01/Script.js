@@ -72,3 +72,12 @@ console.log(data);
 }
 
 fetchUser();
+
+/*
+
+--> Line by Line code chale use bolte h synchronus
+--> jo bhi code asynchronus nature ka ho use side stack mai daal do, or jo bhi agla synchrouns code ho use clao fr
+jab main stack khali ho jaye tb side stack check kro ki asynchronus code complete hua ya nahi, or agr vo complete 
+hua ho to use main stack mai lao and chlo do. Thats IT.
+
+*/
