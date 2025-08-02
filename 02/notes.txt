@@ -1,0 +1,32 @@
+-> day 2 TOPICS
+1. Node.js Basics
+2. Introduction to node.js
+3. Installation of node.js and npm
+4. working with module
+5. file system operations
+6. understanding http module
+
+->lets start
+
+-what is node.js?
+ programming language (no)
+ technology (no)
+ framework (no)
+ library (no)
+ javascript run time enviornment (yes)
+
+ note- js backend nahi bna skta, kyuki js k pass wo functionality nahi h jinse backend bnta hai.
+ "rayn dahl" isne socha js se backend ban na chahiye
+ to isne v8 k code ko jo ki c++ mai likha hua h use wrape kr dia js k code se to hum code likhe gai js mai or vo code jaye ga js ka code k paas jo v8 k code ko wrape krke baitha h vo hmare code ko handle krega and then vo convert kre ga code ko c++ k code mai or use v8 ko dega and boom hmara code chle ga. server bnayega
+  
+->npm and node TOPICS
+1. Working with npm and node
+2. npm init 
+3. node basic usages
+
+npm init -> create package.json -> lekha jokha of the project
+
+-node(file system)
+
+code - const fs = require('node:fs');
+then we learn bare minimum - writefile, appendfile, copyfile, rename, unlink
