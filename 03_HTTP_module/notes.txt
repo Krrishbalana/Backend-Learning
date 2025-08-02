@@ -20,4 +20,19 @@ A protocol used to send and receive data between client (like browser) and serve
 🔒 HTTPS (HTTP Secure):
 It’s HTTP with encryption (SSL/TLS). Keeps data secure and private while transferring between client and server.
 
- 
+
+
+--
+how a server is created:
+
+|    const http = require('node:http');                |
+|                                                      |
+|     const server = http.createServer((req, res)=>{   |
+|         res.end("hello bhai log")                    |
+|     })                                               |
+|                                                      |
+|     server.listen(3000);                             |
+
+
+--
+
