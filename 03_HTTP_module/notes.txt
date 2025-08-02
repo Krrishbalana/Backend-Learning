@@ -1,0 +1,23 @@
+we already learned fs module now let's start http module 
+
+
+--
+some terms and gyaan ki baat
+1. protocol - rules
+2. Internet ko use krne k liye kuch rules(protocol) bnaye gaye hai , unhone ye rules bnaye hai jinhone internet bnaya hai, or in 
+rules ko follow krna jruri hai , ab rules ache se follow ho isliye ye appke Operation system ke software mai pre-installed
+aate hai.
+3. http , https  , ..... ye sb ye protocol hai
+4. rules kyun? - so bhai log rules kyuki --> kaise data aaega, kaise secqurity manage hogi, and tones of things.
+5. http - ye vo protocol hai jiske bina aap internet pe na hi kuch bejh skte ho na hi kuch mangwa skte ho.
+
+
+--
+http & https
+🌐 HTTP (HyperText Transfer Protocol):
+A protocol used to send and receive data between client (like browser) and server. It’s not secure — data is sent in plain text.
+
+🔒 HTTPS (HTTP Secure):
+It’s HTTP with encryption (SSL/TLS). Keeps data secure and private while transferring between client and server.
+
+ 
