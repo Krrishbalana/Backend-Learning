@@ -1,0 +1,67 @@
+day 3
+
+--
+** what we will cover **
+1. NPM understanding
+2. installation and uninstallation of anything basics & advance
+3. understanding node module
+4. dependencies
+5. devdependencies
+6. scripts : understanding default script path and custom scripts
+
+
+--
+** npm understanding **
+npm = node package manager(before) -> nahi pta mujhe(naan and paneer makhni)
+
+--
+** diff between package and module **
+module: node js core mai jo installed aata hai use bolte h module.
+package: jo hum npm se download krte hai use bolte h package.
+
+eg: agar hume is app bnana hai jo cheezo ko pdh kr voice mai convert krta hai, to esa app bnane k liye hume "text to speech"
+apply krna pdega jisme hume bhaut time lg jayega lekin google ne use pehele hi kr dia h or hum vo package npm store se download
+krke use kr skte hai thats it.
+
+
+--
+** installation and uninstallation of anything basics & advance **
+install: comand-> npm install package_name
+uninstall: comand-> npm uninstall package_name
+install any specific version-> npm install package_name@version
+
+
+--
+** understanding node module **
+some important things related to node module
+1. is folder se hume kuch lena dena as such nahi hota
+2. jo bhi hum npm se install krte hai uska code isme hota hai
+3. agr humne koi package install kia npm se or use kisi or dependencies ki jrurat hai chlne k liye to vo bhi apne aap
+download ho jati h or uska code bhi node module mai hota hai.
+
+
+--
+** dependencies **
+packages or packages ki dependencies(basically chalane k liye jo jo chahiye hume us package ko). 
+
+** devdependencies **
+aise packages jo sirf development mai kaam aayenge, lekin jb app bn jayega or deploye ho jayega tb hum use nahi kre gai.
+
+
+--
+** scripts **
+|      "scripts": {                                                 |
+|        "test": "echo \"Error: no test specified\" && exit 1"      |
+|      },                                                           |
+
+aapki package.json mai kuch esa hoga yahi hoti h scripts,
+|           dekho yaar kabhi kabhi hum "npm start/npm test" likhte h or kabhi kabhi         |
+|           hum "npm run ....(npm run dev)" esa kuch likhte hai                             |
+|           to agr hum bina "run" use kiye kuch command likhte hai to vo                    |
+|           hmare operating system mai jo commands hoti h usme se dhoondta hai              |
+|           or agr mil jati h to chlata hai lekin agr hume kuch khudki comand               |
+|           jo ki scripts mai likhi hui h vo use krni h to hum "npm run..."                 |
+|           ese likhna pdta hai to hmare computer ko pta chlta hai run likha                |
+|           mtlb scripts mai se dhundo use. BOOM.                                           |
+
+when we install node.js and npm to our local system it already creates a start and test command in out local computer comands.
