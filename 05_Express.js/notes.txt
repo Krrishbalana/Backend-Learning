@@ -1,0 +1,85 @@
+day-4
+
+--------------------------------------------------
+** Todays Topics **
+1. Express.js Framework
+2. Introduction to Express.js
+3. Setting up a basic Express.js Application
+4. Routing
+5. Middleware
+6. Request and response handling
+7. Error handling
+
+
+
+--------------------------------------------------
+MERN: MongoDM Express.js React.js Node.js
+
+
+
+--------------------------------------------------
+** Introduction to Express.js **
+-> Express.js is a npm package
+-> it is a Framework
+-> Express.js manages everything from reciving the request and giving back the response.
+
+
+
+--------------------------------------------------
+** Setting up a basic Express.js Application **
+step1: go to npm store
+step2: search for Express
+step3: run the command to install the package
+step4: and BOOM Express is not all set to work.
+
+
+
+--------------------------------------------------
+** note **
+when we make change in our code , the server will not restart by it self we have to stop the server(^ + c) and
+then restart it to make change visible on local host,
+but there is catch- we have a package "nodemon" which will help us in this case
+-> to install this package run the command -> "npm install nodemon -g"
+-> nodemon is a global package, you dont need to install it everytime in your system if you installed it before
+-> to run your app using nodemon run the command ->  "nodemon file_name(script.js)"
+-> ye install ho jaye to bs ek baar run kro "nodemon script.js" or fr aap file mai changes kro or save kro to server
+automaticaly restart ho jayega and you can see the changes you made.
+
+
+
+--------------------------------------------------
+** routing **
+have a look at script.js file line no.1 to line no.12
+->Routing is like giving directions to your web app.
+When a user visits a certain path (like /about), routing tells Express what to do — such as send back a web page,
+a message, or some data.
+->Imagine a website is like a restaurant. Routing is like the menu:
+When someone asks for /home, give them the homepage.
+When they ask for /contact, show the contact page.
+When they POST to /login, check their credentials.
+
+
+
+--------------------------------------------------
+** Middleware **
+->Middleware is like a checkpoint — it can look at the request, make changes, log things, check security, etc., before passing control to the next handler.
+->jab bhi server request accept krta hai waha se route ke beech pohonche tak agar aap us request ko beech mai rokte ho and kuch perform krte ho, to ye element Middleware kehelata hai.
+
+
+--------------------------------------------------
+** way to write Middleware **
+
+app.use((req, res, next)=>{
+    console.log("middleware chla");
+    next();
+})
+
+
+--------------------------------------------------
+** Error handler **
+An error handler is a special type of middleware in Express that catches and handles errors in your app — like wrong inputs, broken routes, or bugs.
+-> In simple Words:
+If something goes wrong in your app, the error handler catches it and sends a proper response — like "Something went wrong" or a custom message.
+
+->An error handler is a middleware with 4 arguments: (err, req, res, next)
+
