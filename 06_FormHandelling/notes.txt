@@ -1,0 +1,26 @@
+--------------------------------------------
+day-5
+Form handling and working with forms: Handle backend process of forms and making sure the data coming from any frontend library, framework, tampleting engines, we still handle it at the backend.
+
+note: install -> npm install cookie-parser
+
+--------------------------------------------
+** some terms **
+note: hum log kuch bhi data frontend pr browser pr rakh skte hai , or jab bhi aap kuch bhi request backend pr kro gai wo frontend pr saved data actomatically backend pr chla jayega 
+1. sesion:
+2. cookie: 
+
+--------------------------------------------
+1. What is a Cookie?
+A cookie is a small piece of data stored in the user's browser by the server. It is sent with every HTTP request made to the server.
+✅ Use:
+Store small data like authentication tokens, user preferences, etc.
+Stateless — server doesn't store data, browser does.
+2. What is a Session?
+A session stores data on the server and gives the client a sessionID via a cookie. When the client sends the sessionID back, the server retrieves their data.
+✅ Use:
+Login systems
+Cart items
+Temporary stateful user data
+🔐 More Secure than cookies:
+Data is not exposed to the client, only the session ID is.
