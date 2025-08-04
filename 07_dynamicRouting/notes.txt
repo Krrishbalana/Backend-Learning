@@ -1,0 +1,27 @@
+--
+Day-6
+1. initialize the project with npm 
+2. install express intall 
+
+--
+** we will learn **
+1. setting up parser for form
+
+2. setting up EJS for EJS pages
+    step1: install ejs from npm.
+    step2: set up ejs as a view engine.
+
+3. setting up public static files
+
+4. Dynamic Routing
+    a. Dynamic Routing itself.
+    b. how to get data coming from frontend at backend route.
+
+-> dynamic Routing:
+    step1: go to your browser
+    step2: write the url that you want to create(e.g localhost:3000/profile/krish)
+    step3: press enter and you will get an error
+    step4: create the rount andrefresh the browser and now you can see the route is working 
+    step5: now you relaise if you make that url = localhost:3000/profile/golu it will show the error again.
+    step6: go to the file and realise the dynamic part of your url in abouve case it is "krish" where we can put "chacha" , "golu", "bhai" 
+    step7: go the code where you created the route and then make this changes - app.get("/profile/:username",funtion)
