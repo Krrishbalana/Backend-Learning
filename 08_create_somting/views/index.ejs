@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notes taking app</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="w-full min-h-screen bg-zinc-700">
+        <div class="form p-10 text-white text-xl">
+            <form action="/create" method="post">
+                <input class="block px-5 w-full rounded-md outline-none py-2 bg-zinc-500 " type="text" placeholder="Title goes here" name="title">
+                <textarea rows="6" class="block mt-2 w-full rounded-md outline-none px-5 py-2 bg-zinc-500 resize-none" placeholder="write your tasks details here" name="details"></textarea>
+                <input class="bg-blue-500 rounded-md px-5 py-2 mt-2 hover:px-7 duration-300 hover:bg-blue-700" type="submit" value="Create Task">
+            </form>
+        </div>
+        <div class="teasks p-10 flex gap-4 flex-wrap">
+            <% if(tasks.length > 0){ %> 
+                <% tasks.forEach((val) => { %>
+                    <div class="task min-w-72 px-3 py-4 rounded-md bg-zinc-500">
+                        <h1 class="text-white tracking-tight text-3xl"> <%= val %></h1>
+                        <a class="text-blue-700 inline-block mt-3 " href="/files/<%= val %>">Read.</a>
+                    </div>
+                    <% }) %>
+                    
+           <% } else{ %>
+            <h3 class="text-zinc-500 text-9xl font-extrabold shadow-lg rounded-2xl px-7 py-4">No Task here.</h3>
+          <% } %>
+            
+            
+            
+            
+        </div>
+    </div>
+</body>
+</html>

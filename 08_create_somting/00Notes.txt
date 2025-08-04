@@ -1,0 +1,6 @@
+//steps to start
+1. run: npm init(to create package.json)
+2. check the main file in the package.json and create it manulay(index.js)
+3. run: npm install express
+4. install nodemod from npm store if not already install
+5. run: npm i ejs
