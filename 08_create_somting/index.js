@@ -38,6 +38,6 @@ app.get("/files/:filename", (req, res)=>{
     })
 })
 
-app.listen(3000, function(){
-    console.log("server is running");
+app.listen(4000, function(){
+    console.log("server is running hey");
 })

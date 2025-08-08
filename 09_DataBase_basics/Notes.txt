@@ -1,0 +1,65 @@
+--
+Today's Learning
+1. Data Storage
+2. Types of DBs
+3. What? and Why?
+4. terminologies: collecting, documents, Schemas, keys, models
+
+
+
+--------------------------------------------------------------
+** data storage **
+-> daha hum sare users ka data store krte hai.
+-> kaha karenge store: DATABASE(ye sb kuch store kr skta h jo aap chahe: videos, Binary, images, text, files, etc).
+
+
+
+--------------------------------------------------------------
+** Types of DBs **
+SQL | NoSQL
+NoSQL: Not only SQL
+
+
+-> SQL: data in tabuler format(we are not going to study it here).
+-> NoSQL: isme tabels nahi hota, to kya hota hai-> {} -> objects hote hai.
+
+
+--------------------------------------------------------------
+NoSQl : we will study this with MongoDB
+MongoDB is the name of DATABASE which follows the NoSQL data Theory
+
+note: NoSQl is a concept and MongoDB is the DB which follow NoSQL concept
+
+
+
+--------------------------------------------------------------
+** What? and Why? **
+
+what is MongoDB?
+->MongoDB is the DB which follow NoSQL concept/Theory.
+
+Why MongoDB?
+->In order to store data of every user.
+
+
+
+--------------------------------------------------------------
+** terminologies **
+
+Flow:
+Database --> Collection --> documents
+eg:
+baseOFProject --> UsersData/SalesDara/Etc ---> DataOFIndividualUser....
+
+
+
+
+CODE                                                   DATABSE
+--------------------------------------------------------------
+mongoose.connect       ->           Database create hota hai
+model create           ->           collecting create hota hai
+CREATE code            ->           Document create hota hai
+
+
+
+

@@ -1,0 +1,7 @@
+--
+Todays Topic
+1. MongoDB installation
+2. MongoDB Connection
+3. Schema
+4. Model
+5. Create, Read, Update, Delete(CRUD)
