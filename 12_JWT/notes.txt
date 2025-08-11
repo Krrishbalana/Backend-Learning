@@ -1,0 +1,2 @@
+JWT: JsonWebToken
+JWT-> JWT teen hison se bnta hai-> website pe jao jwt or check krov-> HEADER, PAYLOAD, VERIFY SIGNATURE
