@@ -19,7 +19,7 @@ npm = node package manager(before) -> nahi pta mujhe(naan and paneer makhni)
 module: node js core mai jo installed aata hai use bolte h module.
 package: jo hum npm se download krte hai use bolte h package.
 
-eg: agar hume is app bnana hai jo cheezo ko pdh kr voice mai convert krta hai, to esa app bnane k liye hume "text to speech"
+eg: agar hume esa app bnana hai jo cheezo ko pdh kr voice mai convert krta hai, to esa app bnane k liye hume "text to speech"
 apply krna pdega jisme hume bhaut time lg jayega lekin google ne use pehele hi kr dia h or hum vo package npm store se download
 krke use kr skte hai thats it.
 
