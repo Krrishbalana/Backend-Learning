@@ -36,7 +36,7 @@ app.post('/register', async (req, res)=>{
             })
             let token = jwt.sign({email, name, age,  userid: user._id}, 'shhh');
             res.cookie('token', token);
-            res.send('registered');
+            res.render('profile', {user})
         })
         
     })
@@ -68,8 +68,26 @@ app.get('/logout', (req, res)=>{
     res.redirect('/login');
 })
 
-app.get('/profile', islogedin , (req, res)=>{
-    res.render('profile', {user: req.user})
+app.get('/profile', islogedin , async (req, res)=>{
+    let user = await userModel.findOne({email: req.user.email})
+    user = await user.populate({
+        path: 'posts',
+        options: { sort: { date: -1 } }  // newest posts first
+    })
+
+    res.render('profile', {user})
+})
+
+app.post('/post', islogedin , async (req, res)=>{
+    const user = await userModel.findOne({email: req.user.email})
+    let post = await postModel.create({
+        user: user._id,
+        content: req.body.content
+    })
+
+    user.posts.push(post._id)
+    await  user.save(); 
+    res.redirect('/profile');
 })
 
 function islogedin(req, res, next){

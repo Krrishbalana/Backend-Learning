@@ -4,27 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Profile</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="h-screen w-full bg-zinc-900 flex items-center justify-center p-6">
-        <div class="bg-zinc-800 p-8 rounded-xl shadow-lg w-full max-w-md">
-            <h1 class="text-2xl font-bold text-white mb-6 text-center">Profile Details</h1>
-            <div class="space-y-4">
-                <p class="text-white"><span class="font-semibold text-indigo-400">Name:</span> <%= user.name %></p>
-                <p class="text-white"><span class="font-semibold text-indigo-400">Age:</span> <%= user.age %></p>
-                <p class="text-white"><span class="font-semibold text-indigo-400">Email:</span> <%= user.email %></p>
-                <p class="text-white"><span class="font-semibold text-indigo-400">User ID:</span> <%= user.userid %></p>
-            </div>
-            <div class="mt-6 flex flex-col gap-3">
-                <a href="/logout" class="block w-full text-center p-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition duration-300">
-                    logout
-                </a>
-                <a href="/" class="block w-full text-center p-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition duration-300">
-                    Go Home
-                </a>
-            </div>
+<body class="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white min-h-screen flex flex-col items-center p-6">
+
+    <!-- Header -->
+    <div class="w-full max-w-4xl flex justify-between items-center mb-8">
+        <h1 class="text-3xl font-bold">Your Profile</h1>
+        <a href="/logout" class="bg-red-500 hover:bg-red-600 transition px-4 py-2 rounded-lg text-sm font-medium">
+            Logout
+        </a>
+    </div>
+
+    <!-- Greeting -->
+    <div class="w-full max-w-4xl bg-zinc-800 p-6 rounded-xl shadow-lg border border-zinc-700">
+        <h3 class="text-xl font-semibold mb-2">
+            Hello, <span class="text-indigo-400"><%= user.name %></span> 👋
+        </h3>
+        <p class="text-sm text-zinc-400">You can create a new post below.</p>
+    </div>
+
+    <!-- Post Form -->
+    <form action="/post" method="post" class="w-full max-w-4xl bg-zinc-800 p-6 mt-6 rounded-xl shadow-lg border border-zinc-700 space-y-4">
+        <textarea 
+            name="content" 
+            placeholder="What's on your mind?" 
+            rows="4"
+            class="w-full p-3 rounded-lg bg-zinc-900 text-white placeholder-zinc-500 border border-zinc-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
+        <input 
+            type="submit" 
+            value="Create New Post" 
+            class="w-full bg-indigo-500 hover:bg-indigo-600 transition px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer">
+    </form>
+
+    <!-- Posts Section -->
+    <div class="w-full max-w-4xl mt-10">
+        <h3 class="text-lg font-semibold mb-4">Your Posts</h3>
+        <div class="space-y-4">
+            <% if (user.posts && user.posts.length > 0) { %>
+                <% user.posts.forEach(function(post) { %>
+                    <div class="bg-zinc-800 p-5 rounded-xl shadow-lg border border-zinc-700 hover:scale-[1.01] transition">
+                        <h4 class="font-semibold text-indigo-400">@<%= user.name %></h4>
+                        <p class="mt-2 text-zinc-300 text-sm">
+                            <%= post.content %>
+                        </p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="/like/<%= post._id %>" class="text-sm text-blue-400 hover:underline">👍 Like</a>
+                            <a href="/edit/<%= post._id %>" class="text-sm text-green-400 hover:underline">✏ Edit</a>
+                            <a href="/delete/<%= post._id %>" class="text-sm text-red-400 hover:underline">🗑 Delete</a>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p class="text-zinc-400">You haven’t posted anything yet.</p>
+            <% } %>
         </div>
     </div>
+
 </body>
 </html>
